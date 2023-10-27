@@ -29,7 +29,7 @@ export default async function Page({ params }: Props) {
           />
         )}
       </div>
-      <div className="text-xl py-3 break-words md:tracking-wide md:leading-normal">
+      <div className="antialiased mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-medium text-left">
         <PortableText
           value={page.content}
           components={RichTextComponents}
