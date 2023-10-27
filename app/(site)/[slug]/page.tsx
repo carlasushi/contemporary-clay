@@ -15,7 +15,7 @@ export default async function Page({ params }: Props) {
     <article className="antialiased container py-5 mx-auto md:max-w-6xl lg:max-w-5xl border-t-8 border-black">
     {/* header */}
     <header className="flex md:max-w-5xl align-middle justify-center items-center sm:mx-5 text-xl sm:text-2xl lg:text-3xl xl:text-4xl mx-3 my-6 md:text-3xl font-sans font-normal text-left lg:m-12 ">
-      <h1 className="text-3xl py-5 uppercase lg:text-5xl ">{page.title}</h1>
+      {/* <h1 className="text-3xl py-5 uppercase lg:text-5xl ">{page.title}</h1> */}
     </header>
     <div className="grid grid-cols-1 py-3 mx-5 md:px-3 xl:px-0 align-middle justify-center items-center text-justify">
       <div className=" ">
@@ -29,7 +29,7 @@ export default async function Page({ params }: Props) {
           />
         )}
       </div>
-      <div className="antialiased mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-medium text-left">
+      <div className="antialiased mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-normal text-left">
         <PortableText
           value={page.content}
           components={RichTextComponents}

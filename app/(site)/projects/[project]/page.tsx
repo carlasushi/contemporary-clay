@@ -28,7 +28,7 @@ export default async function Project({ params }: Props) {
             />
           )}
         </div>
-        <div className="antialiased mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-medium text-left">
+        <div className="antialiased mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-normal text-left">
           <PortableText
             value={project.content}
             components={RichTextComponents}
