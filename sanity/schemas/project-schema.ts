@@ -1,3 +1,5 @@
+// import { defineArrayMember, defineType } from "sanity";
+
 const project = {
   name: "project",
   title: "Projects",
@@ -8,6 +10,14 @@ const project = {
       title: "Name",
       type: "string",
     },
+    // {
+    //   name: "date",
+    //   title: "Date",
+    //   type: "date",
+    //   options: {
+    //     dateFormat: 'YYYY-MM-DD',
+    //   }
+    // },
     {
       name: "slug",
       title: "Slug",
@@ -36,7 +46,58 @@ const project = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }] //rich text  headings bolds etc.
+      of: [
+        {
+          type: "block",
+          marks: {
+            annotations: [
+              {
+                name: "link",
+                type: "object",
+                title: "Link",
+                fields: [
+                  {
+                    name: "href",
+                    type: "url",
+                    title: "URL",
+                    default: "/",
+                  },
+                ],
+              },
+            ],
+          },
+          styles: [
+            {title: 'Normal', value: 'normal'},
+            {title: 'Emphasis', value: 'em'},
+            {title: 'Strong', value: 'strong'},
+            {title: 'H1', value: 'h1'},
+            {title: 'H2', value: 'h2'},
+            {title: 'H3', value: 'h3'},
+            {title: 'H4', value: 'h4'},
+            {title: 'Quote', value: 'blockquote'},
+          ],
+        },
+        {
+          type: "image",
+          fields: [
+            {
+              name: "image",
+              type: "image",
+              title: "Image",
+            },
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative text",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
     }
   ]
 }

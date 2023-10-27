@@ -5,7 +5,7 @@ import schemas from "./sanity/schemas"
 const config = defineConfig({
   projectId: "jjqrmupu",
   dataset: "production",
-  title: "Wisdom Tarot Website",
+  title: "Contemporary Ceramics Sanity Studio",
   apiVersion: "2023-10-09",
   basePath: "/admin",
   plugins: [deskTool()],

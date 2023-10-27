@@ -7,5 +7,6 @@ export type Project = {
   slug: string;
   image: string;
   url: string;
-  content: PortableTextBlock[];
+  content: (PortableTextBlock )[]; // sanity stores rich content like this https://www.sanity.io/docs/block-content
+  description: string;
 }
