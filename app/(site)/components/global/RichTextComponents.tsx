@@ -39,7 +39,7 @@ export const RichTextComponents = {
       // },
     // },
     marks: {
-      customFont: ({children} : any) => <span style={{ fontFamily: 'sans-serif', WebkitFontSmoothing: 'antialiased' }}>{children}</span>,
+      // customFont: ({children} : any) => <span style={{ fontFamily: 'sans-serif', WebkitFontSmoothing: 'antialiased' }}>{children}</span>,
 
       link: ({value, children} : any) => {
         const target = value?.href && !value?.href.startsWith('/')
