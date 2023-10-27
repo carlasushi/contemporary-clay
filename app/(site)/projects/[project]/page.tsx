@@ -24,7 +24,7 @@ export default async function Project({ params }: Props) {
               alt={project.name}
               width={250}
               height={100}
-              className="object-cover rounded-2xl w-full"
+              className="object-cover rounded-2xl w-full xxl:w-1/2"
             />
           )}
         </div>
