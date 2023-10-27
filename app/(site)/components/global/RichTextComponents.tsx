@@ -39,6 +39,8 @@ export const RichTextComponents = {
       // },
     // },
     marks: {
+      customFont: ({children} : any) => <span style={{ fontFamily: 'sans-serif', WebkitFontSmoothing: 'antialiased' }}>{children}</span>,
+
       link: ({value, children} : any) => {
         const target = value?.href && !value?.href.startsWith('/')
           ? 'noreferrer noopener'
@@ -68,11 +70,11 @@ export const RichTextComponents = {
     },
     block: {
       // Ex. 1: customizing common block types
-      h1: ({children} : any) => <h1 className="text-4xl py-2 mb-3">{children}</h1>,
-      h2: ({children} : any) => <h1 className="text-3xl py-2 mb-3">{children}</h1>,
-      h3: ({children} : any) => <h1 className="text-2xl py-2 mb-3">{children}</h1>,
-      h4: ({children} : any) => <h1 className="text-xl py-2 mb-3">{children}</h1>,
+      h1: ({children} : any) => <h1 className="text-4xl lg:text-6xl py-2 mb-3 uppercase font-sans ">{children}</h1>,
+      h2: ({children} : any) => <h1 className="text-3xl  lg:text-5xl py-2 mb-3 uppercase font-sans ">{children}</h1>,
+      h3: ({children} : any) => <h1 className="text-2xl  lg:text-4xl py-2 mb-3 uppercase font-sans ">{children}</h1>,
+      h4: ({children} : any) => <h1 className="text-xl  lg:text-3xl py-2 mb-3 uppercase font-sans ">{children}</h1>,
 
-      blockquote: ({children} : any) => <blockquote className="border-l-purple-500">{children}</blockquote>,
+      blockquote: ({children} : any) => <blockquote className="border-l-yellow-500">{children}</blockquote>,
   }
 }

@@ -28,12 +28,14 @@ export default async function Project({ params }: Props) {
             />
           )}
         </div>
-        <div className="text-2xl py-3break-words tracking-wide leading-normal">
+        <div className="mx-3 my-6 text-2xl md:text-3xl  xl:text-4xl font-sans font-normal text-left">
           <PortableText
             value={project.content}
             components={RichTextComponents}
+
           />
         </div>
+
         {/* Add a third div here if needed */}
         <div className="row-span-1">{/* content for third row */}</div>
       </div>
