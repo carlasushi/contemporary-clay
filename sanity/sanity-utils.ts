@@ -4,41 +4,6 @@ import { Footer } from "@/types/Footer";
 import { createClient, groq } from "next-sanity";
 import  clientConfig  from "./config/client-config";
 
-// export async function getProjects(): Promise<Project[]> {
-//     return createClient(clientConfig).fetch(
-//     groq`*[_type == "project"]{
-//       _id,
-//       _createdAt,
-//       name,
-//       "slug": slug.current,
-//       "image": image.asset->url,
-//       url,
-//       content,
-//       description
-//     }`
-//   )
-// }
-
-// export async function getProject(slug: string): Promise<Project> {
-
-// // one single project
-//   return createClient(clientConfig).fetch(
-//     // you have slug[0] bc you want the ONE that matches that slug out of the array of projectS.
-//     groq`*[_type == "project" && slug.current == $slug][0]{
-//       _id,
-//       _createdAt,
-//       name,
-//       "slug": slug.current,
-//       "image": image.asset->url,
-//       url,
-//       content,
-//       description
-//     }`,
-//     { slug: slug }
-//   )
-// }
-
-// updated
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "project"]{
@@ -67,7 +32,6 @@ export async function getProjects(): Promise<Project[]> {
   );
 }
 
-// update
 export async function getProject(slug: string): Promise<Project> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
