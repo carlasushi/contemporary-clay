@@ -57,8 +57,16 @@ export default async function Home() {
             .map((project) => (
               <div key={project._id} className="border-b-2 border-black">
                 <div className="grid md:grid-cols-12 p-2 xl:p-0 xl:m-3 m-2 gap-3 lg:gap-0  text-lg md:text-xl lg:text-2xl xl:text-3xl">
-                  <h1 className="uppercase font-semibold  md:col-span-2 ">{project.name}</h1>
-                  <p className="text-base md:text-lg lg:text-xl md:col-span-8 md:px-3 md:py-2 ">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    key={project._id}
+                    className=" hover:text-amber-400 curs hover:scale-y-50 transition md:w-fit md:col-span-2"
+                  >
+                    <h1 className="uppercase font-semibold  md:col-span-2 ">
+                      {project.name}
+                    </h1>
+                  </Link>
+                  <p className="text-base md:text-lg  md:col-span-8 md:px-5 md:py-2 ">
                     {project.description}
                   </p>
 
