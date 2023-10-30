@@ -21,8 +21,8 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="container py-3 mx-auto font-light antialiased">
-        <header className="top-0 sticky p-5 md:p-0 lg:px-14 bg-blend-multiply backdrop-blur-lg opacity-90">
+      <body className="container py-3 mx-auto font-light antialiased ">
+        <header className="top-0 sticky p-5 md:p-0 lg:px-14 bg-blend-multiply backdrop-blur-lg opacity-90 md:text-xl">
           <div className="flex items-center justify-between md:px-3 lg:mx-10 lg:px-10  h-20">
             <Link
               href="/"

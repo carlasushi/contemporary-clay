@@ -6,9 +6,9 @@ export default async function Home() {
 
   return (
     <section className="">
-      <div className="flex flex-col mx-3">
+      <div className="flex flex-col mx-3 lg:mx-10 lg:px-5">
         {/* grid */}
-        <div className="grid md:mb-36 md:grid-cols-6 md:items-start">
+        <div className="grid md:mb-10 md:grid-cols-6 md:items-start  ">
           <h1 className="md:col-span-2 text-3xl lg:text-5xl xL:text-7xl uppercase my-3 mx-1 font-sans font-medium flex-wrap ">
             Contemporary Clay
           </h1>
@@ -49,8 +49,8 @@ export default async function Home() {
         {/* grid end */}
         {/* map section fetching */}
         <div className="leading-relaxed py-3" id="#course">
-          <h1 className="text-3xl mb-4 md:mb-5 md:text-4xl md:my-3 lg:text-5xl xl:text-6xl">
-            WEEKS
+          <h1 className="text-3xl lg:py-5 mb-4 md:mb-5 md:text-4xl md:my-3 lg:text-5xl xl:text-6xl">
+            COURSE CONTENT
           </h1>
           {projects
             .sort((a, b) => a.name.localeCompare(b.name))
@@ -66,7 +66,7 @@ export default async function Home() {
                       {project.name}
                     </h1>
                   </Link>
-                  <p className="text-base md:text-lg  md:col-span-8 md:px-5 md:py-2 ">
+                  <p className="text-base md:text-lg  md:col-span-8 md:px-5 md:py-2 font-mono ">
                     {project.description}
                   </p>
 

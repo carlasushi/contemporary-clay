@@ -29,7 +29,7 @@ export default async function Page({ params }: Props) {
           />
         )}
       </div>
-      <div className="antialiased mx-3 my-6 text-lg md:text-2xl font-sans font-normal text-left leading-relaxed">
+      <div className="antialiased mx-3 my-6 text-lg md:text-xl font-sans font-normal text-left leading-relaxed">
         <PortableText
           value={page.content}
           components={RichTextComponents}

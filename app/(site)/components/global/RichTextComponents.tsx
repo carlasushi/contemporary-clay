@@ -30,7 +30,7 @@ export const RichTextComponents = {
           href={value?.href}
           target={target}
           rel={ target && 'noindex nofollow'}
-          className="underline  hover:text-yellow-600 tracking-wide ">
+          className="underline  hover:text-yellow-600 tracking-wide visited:text-yellow-900 py-3 leading-relaxed">
             {children}
           </Link>
         )
