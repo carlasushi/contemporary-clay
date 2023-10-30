@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import urlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
+import React from "react";
 
 export const RichTextComponents = {
     types: {
@@ -38,16 +39,34 @@ export const RichTextComponents = {
       },
     },
 
-    list :{
+
+    list: {
       bullet: ({ children } : any) => (
-        <ul className="ml-10 py-5 list-disc space-y-5 mt-3">{children}</ul>
+        <ul className="ml-10 py-5 list-disc space-y-5 mt-3">
+          {React.Children.map(children, (child, index) =>
+            React.cloneElement(child, { key: index })
+          )}
+        </ul>
       ),
       number: ({ children } : any) => (
-        <ol className="ml-10 py-5 list-disc space-y-5 mt-3">{children}</ol>
+        <ol className="ml-10 py-5 list-disc space-y-5 mt-3">
+          {React.Children.map(children, (child, index) =>
+            React.cloneElement(child, { key: index })
+          )}
+        </ol>
       ),
-  // const YourComponent = (props) => {
-  //   return <PortableText value={props.value} components={myPortableTextComponents} />
     },
+
+  //   list :{
+  //     bullet: ({ children } : any) => (
+  //       <ul className="ml-10 py-5 list-disc space-y-5 mt-3">{children}</ul>
+  //     ),
+  //     number: ({ children } : any) => (
+  //       <ol className="ml-10 py-5 list-disc space-y-5 mt-3">{children}</ol>
+  //     ),
+  // // const YourComponent = (props) => {
+  // //   return <PortableText value={props.value} components={myPortableTextComponents} />
+  //   },
     block: {
       // Ex. 1: customizing common block types
       h1: ({children} : any) => <h1 className="text-4xl lg:text-6xl py-2 mb-3 uppercase font-mono text-yellow-600">{children}</h1>,
