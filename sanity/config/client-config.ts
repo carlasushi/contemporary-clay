@@ -5,7 +5,7 @@ const config = {
   projectId: "jjqrmupu",
   dataset: "production",
   apiVersion: "2023-10-09",
-  useCdn: false, // `false` if you want to ensure fresh data
+  useCdn: true, // `false` if you want to ensure fresh data
 }
 
 export default config
