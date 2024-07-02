@@ -21,7 +21,7 @@ export default async function Home() {
             </p>
             <p>
               Here I incorporate carefully chosen instructional videos, links
-              and skill-matched projects to enhance your your experience.
+              and skill-matched projects to enhance your experience.
             </p>
             <p>
               In class, we follow the book &quot;Handbuilt by Lilly Maetzig
